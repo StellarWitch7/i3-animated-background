@@ -1,13 +1,13 @@
 #!/bin/bash
 
-if [ -z $1 ]
+if [ -z "$1" ]
 then
     pattern="*"
 else
     pattern="$1/*"
 fi
 
-if [ -z $2 ]
+if [ -z "$2" ]
 then
     interval="0.1"
 else
