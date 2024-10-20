@@ -2,7 +2,7 @@
 
 set -x
 
-if [ -z "$1" ]
+if [ -z $1 ]
 then
     exit 1
 else
@@ -10,7 +10,7 @@ else
     name="${base%.*}"
 fi
 
-if [ -z "$2" ]
+if [ -z $2 ]
 then
     dir="$name"
 else
