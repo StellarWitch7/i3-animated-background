@@ -2,20 +2,20 @@
 
 set -x
 
-if [ -z $1 ]
+if [ -z "$1" ]
 then
-    exit -1
+    exit 1
 else
-    base="$(basename -- $1)"
+    base="$(basename -- "$1")"
     name="${base%.*}"
 fi
 
-if [ -z $2 ]
+if [ -z "$2" ]
 then
-    dir=$name
+    dir="$name"
 else
-    dir=$2
+    dir="$2"
 fi
 
-mkdir $dir
-convert $1 -coalesce $dir"/"$name"%03d.png"
+mkdir "$dir"
+convert "$1" -coalesce "${dir}/${name}%03d.png"
